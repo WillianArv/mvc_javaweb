@@ -1,0 +1,13 @@
+{
+    "name": "itca/proyectoformal",
+    "description": "Majo",
+    "require": {
+        "dompdf/dompdf": "^2.0",
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "authors": [
+        {
+            "name": "Willian Arevalo"
+        }
+    ]
+}

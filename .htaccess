@@ -1,0 +1,31 @@
+# Deshabilitar la visualización de directorios para carpetas que no tienen el
+# Archivo index.php
+Options -Indexes
+
+# Proteger el archivo .env con las variables de entorno
+<Files .env>
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Permitir el acceso a las fuentes de Font Awesome
+<FilesMatch "\.(ttf|otf|eot|woff|woff2)$">
+    <IfModule mod_headers.c>
+        Header set Access-Control-Allow-Origin "*"
+    </IfModule>
+</FilesMatch>
+
+# Excluir que los archivos de la carpeta assets sean procesados por el
+# Archivo index.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^assets/(.*)$ /assets/$1 [L]
+
+# Redireccionar todas las peticiones al archivo index.php
+RewriteEngine On
+RewriteBase /formal/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php/$1 [QSA,L]
+
+
+

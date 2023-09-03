@@ -1,0 +1,42 @@
+.error-container {
+    text-align: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.error-content {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fffcfc;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title-error {
+    font-size: 72px;
+    color: #e74c3c;
+    margin: 0;
+}
+
+.text-error {
+    font-size: 24px;
+    color: #444;
+}
+
+.link-error {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.link-error:hover {
+    background-color: #2980b9;
+}
