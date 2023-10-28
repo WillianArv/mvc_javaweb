@@ -13,7 +13,6 @@ try {
     die("Error: No se pudo cargar el archivo .env");
 }
 
-
 # Archivo de funciones auxiliares
 require("app/auxiliares.php");
 

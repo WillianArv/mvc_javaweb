@@ -116,7 +116,6 @@ class ProductController
             $archivo = $getImagen["imagen"];
         }
 
-
         $data = array(
             "nombre" => $_POST["nombre"],
             "descripcion" => $_POST["descripcion"],
@@ -194,6 +193,7 @@ class ProductController
                 );
                 $productModel->insert_color($colorData);
             }
+
             $this->index("Producto ingresado correctamente");
         } else {
             $this->index(false, null, "Error al ingresar el producto", $_POST, "crear");
